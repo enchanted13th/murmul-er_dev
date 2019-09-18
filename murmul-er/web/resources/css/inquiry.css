@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+.wrap > .inquiryForm {
+	width: 85%;
+	border: 2px solid #b6e2f8;
+	border-radius: 10px;
+	margin: 40px auto;
+}
+
+.wrap > .inquiryForm > .top-explain {
+	width: 85%;
+	margin: 20px auto 0 auto;
+	color: #78b9f8;
+}
+
+.wrap > .inquiryForm .emailForm {
+	margin: 0 auto;
+	width: 85%;
+	text-align: center;
+}
+
+.wrap > .inquiryForm .emailForm > .email {
+	margin: 20px 0;
+	font-size: 20px;
+	font-weight: bold;
+	float: left;
+	line-height: 46px;
+}
+
+.wrap > .inquiryForm .emailForm > .domain {
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+.wrap > .inquiryForm .emailForm > .inputBox {
+	width: 200px;
+	margin: 20px 20px;
+	font-size: 15pt;
+	line-height: 40px;
+	border: 2px solid rgb(233, 233, 233);
+}
+
+.wrap > .inquiryForm .contentForm {
+	margin: 0 auto;
+	width: 85%;
+	text-align: center;
+}
+
+.wrap > .inquiryForm .contentForm > .content {
+	text-align: left;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.wrap > .inquiryForm .contentForm > #inputContent {
+	margin: 20px 0;
+	width: 100%;
+	resize: none;
+	height: 400px;
+	font-size: 15pt;
+	border: 2px solid rgb(233, 233, 233);
+
+}
+
+.wrap > .inquiryForm .bottom {
+	margin: 0 auto;
+	width: 85%;
+}
+
+.wrap > .inquiryForm .bottom > .agree {
+	margin-top: 25px;
+}
+
+.wrap > .inquiryForm .bottom > .info {
+	font-size: 17px;
+	width: 25px;
+	height: 25px;
+}
+
+.wrap > .inquiryForm .check {
+	margin: 20px 20px;
+	background-color: #d9d9d9;
+	font-weight: bold;
+	font-size: 17px;
+	border-radius: 10px;
+	padding: 3px 30px;
+}
+.wrap > .inquiryForm .check:hover {
+	cursor: pointer;
+	background-color: #e5e5e5;
+}
+
+.wrap .submit {
+	float: right;
+	background-color: #fff;
+	font-size: 17px;
+	border-radius: 10px;
+	margin-top: 15px;
+	border: 2px solid rgb(182, 226, 248);
+	outline: 0;
+	padding: 3px 30px;
+}
+
+.wrap .submit:hover {
+	cursor: pointer;
+	background-color: rgb(182, 226, 248);
+}
+
+#termPopup {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 10010;
+}
+
+#termPopup > .termWrap {
+	margin: 0 auto;
+	width: 800px;
+	height: 350px;
+	background-color: white;
+	border-radius: 10px;
+	border: 4px solid #b6e2f8;
+}

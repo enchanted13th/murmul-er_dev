@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+#page-top > #wrapper {
+    margin: 0 auto;
+    width: 800px;
+}
+#page-top > #wrapper > .card {
+    margin: 0 auto;
+    width: 800px;
+}
+#page-top > #wrapper > .card > .card-header {
+    width: 800px;
+}
+#page-top > #wrapper > .card > .card-body {
+    width: 800px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+#sublist {
+    color: #666666!important;
+    font-weight: 400!important;
+}
+
+#sublist:hover {
+    cursor: pointer;
+}
+
+.editBtn:hover {
+    cursor: pointer;
+}
+
+#allPopup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 12;
+}
+
+#allPopup > .csWrap {
+    margin: 0 auto;
+    width: 800px;
+    height: 350px;
+    background-color: white;
+    border-radius: 10px;
+    border: 4px solid #b6e2f8;
+}
+
+#allPopup > .csWrap .title{
+    width: 100%;
+    height: 100%;
+    margin: 10px 0px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.menuPopup .lastBtns{
+    margin: 0px 10px 10px 10px;
+    background-color: white;
+    border: 2px solid #b6e2f8;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.underline {
+    color: black;
+}
+
+.underline:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

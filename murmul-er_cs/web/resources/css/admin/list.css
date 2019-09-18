@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+#page-top > #wrapper > .card {
+    margin: 0 auto;
+}
+.align-center {
+    text-align: center;
+}
+
+.underline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: black;
+    background-color: #80a7e5;
+    background-color: #a1c4ed;
+}
+
+@media (max-width: 1000px) {
+    #page-top > #wrapper {
+        width: 1000px;
+    }
+    #page-top > #wrapper > .card {
+        width: 1000px;
+    }
+    #page-top > #wrapper > .card > .card-header {
+        width: 1000px;
+    }
+    #page-top > #wrapper > .card > .card-body {
+        width: 1000px;
+    }
+}
