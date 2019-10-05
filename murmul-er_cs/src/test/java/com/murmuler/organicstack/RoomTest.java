@@ -1,8 +1,5 @@
 package com.murmuler.organicstack;
 
-import com.murmuler.organicstack.dao.RoomDAO;
-import com.murmuler.organicstack.service.RoomService;
-import com.murmuler.organicstack.vo.RoomSummaryVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,5 @@
 package com.murmuler.organicstack;
 
-import com.murmuler.organicstack.dao.ReportDAO;
-import com.murmuler.organicstack.service.ReportService;
 import com.murmuler.organicstack.util.ReportTypeRecord;
 import org.junit.Test;
 import org.junit.runner.RunWith;

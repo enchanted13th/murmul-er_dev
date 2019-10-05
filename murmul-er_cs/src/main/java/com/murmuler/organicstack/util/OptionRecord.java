@@ -1,7 +1,6 @@
 package com.murmuler.organicstack.util;
 
 import com.murmuler.organicstack.mybatis.UtilMapper;
-import com.murmuler.organicstack.vo.OptionVO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

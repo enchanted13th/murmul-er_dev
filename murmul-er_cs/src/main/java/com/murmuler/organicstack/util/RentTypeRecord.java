@@ -3,7 +3,6 @@ package com.murmuler.organicstack.util;
 import java.util.*;
 
 import com.murmuler.organicstack.mybatis.UtilMapper;
-import com.murmuler.organicstack.vo.RentTypeVO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

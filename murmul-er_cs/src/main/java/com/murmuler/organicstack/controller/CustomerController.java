@@ -28,31 +28,18 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-//    @RequestMapping(value="/notice", method= RequestMethod.GET)
-//    public ModelAndView noticeList(){
-//        ModelAndView mav = new ModelAndView();
-//        List<NoticeVO> noticeList = customerService.getNoticeList(1);
-//        mav.addObject("noticeList", noticeList);
-//        mav.setViewName("notice");
-//
-//        return mav;
-//    }
-
-    //    ======================================작업중======================================
-
     @RequestMapping(value="/notice", method= RequestMethod.GET)
     public ModelAndView noticeList(@RequestParam int page){
         ModelAndView mav = new ModelAndView();
         int total = customerService.getNoticeButtonCnt();
         List<NoticeVO> noticeList = customerService.getNoticeList(page);
-
+Z
         int startpage = 1;
         if(total > 5){
             if(page > 3) startpage = page - 2;
             if(page >= total-2) startpage = total - 4;
         }
 
-//        System.out.println(startpage +", "+ page +", "+total);
         mav.addObject("curpage", page);
         mav.addObject("startpage", startpage);
         mav.addObject("total", total);
@@ -61,8 +48,6 @@ public class CustomerController {
 
         return mav;
     }
-
-//    ======================================작업중======================================
 
     @RequestMapping(value="/notice/{notice_id}", method= RequestMethod.GET)
     public ModelAndView noticeView(@PathVariable("notice_id") String id){

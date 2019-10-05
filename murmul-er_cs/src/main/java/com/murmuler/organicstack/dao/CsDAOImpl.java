@@ -1,8 +1,6 @@
 package com.murmuler.organicstack.dao;
 
 import com.murmuler.organicstack.mybatis.CustomerMapper;
-import com.murmuler.organicstack.mybatis.ReportMapper;
-import com.murmuler.organicstack.mybatis.RoomMapper;
 import com.murmuler.organicstack.vo.FaqVO;
 import com.murmuler.organicstack.vo.InquiryVO;
 import com.murmuler.organicstack.vo.InquiryViewVO;
