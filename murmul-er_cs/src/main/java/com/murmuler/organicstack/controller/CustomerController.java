@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
 @Controller
 @RequestMapping("/service")
 public class CustomerController {
-    private Log logger = LogFactory.getLog(RoomController.class);
+    private Log logger = LogFactory.getLog(CustomerController.class);
 
     @Autowired
     private CustomerService customerService;
@@ -33,7 +33,7 @@ public class CustomerController {
         ModelAndView mav = new ModelAndView();
         int total = customerService.getNoticeButtonCnt();
         List<NoticeVO> noticeList = customerService.getNoticeList(page);
-Z
+
         int startpage = 1;
         if(total > 5){
             if(page > 3) startpage = page - 2;

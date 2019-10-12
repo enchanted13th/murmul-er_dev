@@ -13,12 +13,4 @@
     </bean>
 
     <import resource="mybatis-config.xml" />
-
-<!--    ========================== 추가 ==========================-->
-    <bean id="MultipartResolver"
-                class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
-    </bean>
-
-<!--    ========================== 추가 ==========================-->
-
 </beans>

@@ -166,26 +166,6 @@
             <version>1.1.1</version>
         </dependency>
 
-        <!--Thumbnailator-->
-        <dependency>
-            <groupId>net.coobird</groupId>
-            <artifactId>thumbnailator</artifactId>
-            <version>0.4.8</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.fasterxml.jackson.dataformat</groupId>
-            <artifactId>jackson-dataformat-xml</artifactId>
-            <version>2.9.8</version>
-        </dependency>
-
-        <!-- Chat -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.datatype</groupId>
-            <artifactId>jackson-datatype-jsr310</artifactId>
-            <version>2.9.8</version>
-        </dependency>
-
         <!-- commons -->
         <dependency>
             <groupId>commons-io</groupId>
