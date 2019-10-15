@@ -4,7 +4,7 @@ metadata:
  name: murmuler-main-db
 spec:
  ports:
- - port: 35000
+ - port: 3306
  selector:
   app: mysql_main
 
@@ -16,7 +16,7 @@ metadata:
  name: murmuler-cs-db
 spec:
  ports:
- - port: 35001
+ - port: 3306
  selector:
   app: mysql_cs
 
