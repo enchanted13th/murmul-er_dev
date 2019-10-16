@@ -31,7 +31,7 @@ spec:
   matchLabels:
    app: mysql-main
  strategy:
-  type: RollingUpdate
+  type: Recreate
  template:
   metadata:
    labels:
@@ -52,7 +52,7 @@ spec:
        name: mysql-main
      volumeMounts:
      - name: murmuler-main-volume
-       mountPath: /var/lib/mysql/murmuler_main
+       mountPath: /var/lib/mysql
    volumes:
    - name: murmuler-main-volume
      persistentVolumeClaim:
@@ -69,7 +69,7 @@ spec:
   matchLabels:
    app: mysql-cs
  strategy:
-  type: RollingUpdate
+  type: Recreate
  template:
   metadata:
    labels:
@@ -90,7 +90,7 @@ spec:
        name: mysql-cs
      volumeMounts:
      - name: murmuler-cs-volume
-       mountPath: /var/lib/mysql/murmuler_cs
+       mountPath: /var/lib/mysql
    volumes:
    - name: murmuler-cs-volume
      persistentVolumeClaim:

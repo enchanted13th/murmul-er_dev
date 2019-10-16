@@ -8,7 +8,7 @@ spec:
  accessModes:
  - ReadWriteMany
  local:
-  path: /root/murmuler/main-db
+  path: /main-db
  nodeAffinity:
   required:
    nodeSelectorTerms:
@@ -27,7 +27,7 @@ spec:
  accessModes:
  - ReadWriteMany
  local:
-  path: /root/murmuler/cs-db
+  path: /cs-db
  nodeAffinity:
   required:
    nodeSelectorTerms:
