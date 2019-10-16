@@ -4,11 +4,11 @@ metadata:
  name: murmuler-main-db-pv
 spec:
  capacity:
-  storage: 5G
+  storage: 3G
  accessModes:
  - ReadWriteMany
  local:
-  path: /murmuler-main-volume
+  path: /root/murmuler/main-db
  nodeAffinity:
   required:
    nodeSelectorTerms:
@@ -23,11 +23,11 @@ metadata:
  name: murmuler-cs-db-pv
 spec:
  capacity:
-  storage: 5G
+  storage: 3G
  accessModes:
  - ReadWriteMany
  local:
-  path: /murmuler-cs-volume
+  path: /root/murmuler/cs-db
  nodeAffinity:
   required:
    nodeSelectorTerms:

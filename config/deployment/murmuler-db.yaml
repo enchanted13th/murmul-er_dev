@@ -31,14 +31,14 @@ spec:
   matchLabels:
    app: mysql-main
  strategy:
-  type: Recreate
+  type: RollingUpdate
  template:
   metadata:
    labels:
     app: mysql-main
   spec:
    containers:
-   - image: mysql:5.6
+   - image: mysql:5.7
      name: mysql-main
      env:
      - name: MYSQL_ROOT_PASSWORD
@@ -52,7 +52,7 @@ spec:
        name: mysql-main
      volumeMounts:
      - name: murmuler-main-volume
-       mountPath: /var/lib/mysql
+       mountPath: /var/lib/mysql/murmuler_main
    volumes:
    - name: murmuler-main-volume
      persistentVolumeClaim:
@@ -69,14 +69,14 @@ spec:
   matchLabels:
    app: mysql-cs
  strategy:
-  type: Recreate
+  type: RollingUpdate
  template:
   metadata:
    labels:
     app: mysql-cs
   spec:
    containers:
-   - image: mysql:5.6
+   - image: mysql:5.7
      name: mysql-cs
      env:
      - name: MYSQL_ROOT_PASSWORD
@@ -90,7 +90,7 @@ spec:
        name: mysql-cs
      volumeMounts:
      - name: murmuler-cs-volume
-       mountPath: /var/lib/mysql
+       mountPath: /var/lib/mysql/murmuler_cs
    volumes:
    - name: murmuler-cs-volume
      persistentVolumeClaim:
