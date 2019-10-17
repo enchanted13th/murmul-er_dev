@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-  - host: ine.example.com
+  - host: k8s-master
     http:
       paths:
       - path: /echo-hostname
