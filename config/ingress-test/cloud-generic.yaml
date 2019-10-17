@@ -8,6 +8,7 @@ metadata:
 spec:
   externalTrafficPolicy: Local
   type: LoadBalancer
+  externalIPs: [192.168.122.250]
   selector:
     app: ingress-nginx
   ports:

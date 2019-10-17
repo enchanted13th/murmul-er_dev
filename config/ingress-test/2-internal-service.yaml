@@ -10,5 +10,3 @@ spec:
       targetPort: flask-port
   selector:
     app: hostname-service-label
-
-  type: ClusterIP
