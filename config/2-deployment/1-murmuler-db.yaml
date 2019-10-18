@@ -20,7 +20,7 @@ spec:
  type: NodePort
  ports:
  - port: 3306
-   nodePort:32001
+   nodePort: 32001
  selector:
   app: mysql_cs
 
