@@ -15,7 +15,7 @@ spec:
   spec:
    containers:
    - name: tomcat
-     image: enchanted13th/tomcat:8.0
+     image: enchanted13th/tomcat_cs:8.5
      ports:
      - name: tomcat
        containerPort: 8080 
