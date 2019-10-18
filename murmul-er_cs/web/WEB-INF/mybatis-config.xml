@@ -12,7 +12,7 @@
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource" />
+        <property name="dataSource" ref="dataSource" />/Users/ine/dev/murmul-er/web/resources/js
         <property name="mapperLocations" value="classpath*:mapper/*.xml" />
     </bean>
 
