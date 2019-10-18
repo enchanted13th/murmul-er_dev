@@ -3,8 +3,10 @@ kind: Service
 metadata:
  name: murmuler-main-db
 spec:
+ type: NodePort
  ports:
  - port: 3306
+   nodePort: 32000
  selector:
   app: mysql_main
 
@@ -15,8 +17,10 @@ kind: Service
 metadata:
  name: murmuler-cs-db
 spec:
+ type: NodePort
  ports:
  - port: 3306
+   nodePort:32001
  selector:
   app: mysql_cs
 
