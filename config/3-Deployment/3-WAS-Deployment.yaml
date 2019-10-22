@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: was-cs
+ labels:
+  app: was-cs
+spec:
+ selector:
+  matchLabels:
+   app: was-cs
+ template:
+  metadata:
+   labels:
+    app: was-cs
+  spec:
+   containers:
+   - name: was-cs
+     image: enchanted13th/tomcat-cs:8.5
+     ports:
+       name: was-cs
+       containerPort: 8080
+
+---
+

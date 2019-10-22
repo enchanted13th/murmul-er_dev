@@ -1,0 +1,72 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: mysql-main
+spec:
+ selector:
+  matchLabels:
+   app: mysql-main
+ strategy:
+  type: Recreate
+ template:
+  metadata:
+   labels:
+    app: mysql-main
+  spec:
+   containers:
+   - image: mysql:5.7
+     name: container
+     env:
+     - name: MYSQL_ROOT_PASSWORD
+       value: password
+#       valueFrom:
+#        secretKeyRef:
+#         name: mysql-pass
+#         key: password
+     ports:
+     - containerPort: 3306
+     volumeMounts:
+     - name: murmuler-main-volume
+       mountPath: /var/lib/mysql
+   volumes:
+   - name: murmuler-main-volume
+     persistentVolumeClaim:
+      claimName: murmuler-main-db-pvc
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: mysql-cs
+spec:
+ selector:
+  matchLabels:
+   app: mysql-cs
+ strategy:
+  type: Recreate
+ template:
+  metadata:
+   labels:
+    app: mysql-cs
+  spec:
+   containers:
+   - image: mysql:5.7
+     name: container
+     env:
+     - name: MYSQL_ROOT_PASSWORD
+       value: password
+#       valueFrom:
+#        secretKeyRef:
+#         name: mysql-pass
+#         key: password
+     ports:
+     - containerPort: 3306
+     volumeMounts:
+     - name: murmuler-cs-volume
+       mountPath: /var/lib/mysql
+   volumes:
+   - name: murmuler-cs-volume
+     persistentVolumeClaim:
+      claimName: murmuler-cs-db-pvc
+
