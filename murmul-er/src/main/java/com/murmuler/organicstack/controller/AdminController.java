@@ -143,28 +143,28 @@ public class AdminController {
         response.getWriter().print(obj);
     }
 
-    @RequestMapping(value = "/cs/{flag}", method = RequestMethod.GET)
-    public ModelAndView showNoticeFaqList(@PathVariable String flag) {
-        ModelAndView mav = new ModelAndView();
-        switch (flag) {
-            case "faq" :
-                List<FaqVO> faqList = csService.getAllFaqList();
-                mav.setViewName("admin/faqs");
-                mav.addObject("faqList", faqList);
-                break;
-            case "notice" :
-                List<NoticeVO> noticeList = csService.getAllNoticeList();
-                mav.setViewName("admin/notices");
-                mav.addObject("noticeList", noticeList);
-                break;
-            case "inquiry" :
-                List<InquiryViewVO> inquiryList = csService.getAllInquiryList();
-                mav.setViewName("admin/inquiries");
-                mav.addObject("inquiryList", inquiryList);
-                break;
-        }
-        return mav;
-    }
+//    @RequestMapping(value = "/cs/{flag}", method = RequestMethod.GET)
+//    public ModelAndView showNoticeFaqList(@PathVariable String flag) {
+//        ModelAndView mav = new ModelAndView();
+//        switch (flag) {
+//            case "faq" :
+//                List<FaqVO> faqList = csService.getAllFaqList();
+//                mav.setViewName("admin/faqs");
+//                mav.addObject("faqList", faqList);
+//                break;
+//            case "notice" :
+//                List<NoticeVO> noticeList = csService.getAllNoticeList();
+//                mav.setViewName("admin/notices");
+//                mav.addObject("noticeList", noticeList);
+//                break;
+//            case "inquiry" :
+//                List<InquiryViewVO> inquiryList = csService.getAllInquiryList();
+//                mav.setViewName("admin/inquiries");
+//                mav.addObject("inquiryList", inquiryList);
+//                break;
+//        }
+//        return mav;
+//    }
 
     @RequestMapping("/report")
     public ModelAndView showReportList(){
@@ -183,47 +183,47 @@ public class AdminController {
 
         return mav;
     }
-    @RequestMapping(value="/do/{flag}", method = RequestMethod.POST)
-    public void addUpdateArticle(@RequestParam String articleNum,
-                              @RequestParam String title,
-                              @RequestParam String content,
-                              @RequestParam String category,
-                              @PathVariable String flag,
-                              HttpServletResponse response) throws IOException {
-
-        int id = Integer.parseInt(articleNum);
-        int res = 0;
-        switch (flag) {
-            case "update":
-                switch (category) {
-                    case "notice":
-                        res = csService.updateNotice(id, title, content);
-                        break;
-                    case "faq":
-                        res = csService.updateFaq(id, title, content);
-                        break;
-                }
-                break;
-            case "add":
-                switch (category) {
-                    case "notice":
-                        res = csService.addNotice(title, content);
-                        break;
-                    case "faq":
-                        res = csService.addFaq(title, content);
-                        break;
-                }
-                break;
-        }
-        JSONObject obj = new JSONObject();
-        if (res > 0) {
-            obj.put("result", "SUCCESS");
-        } else {
-            obj.put("result", "FAIL");
-        }
-        response.setContentType("application/json; charset=utf-8");
-        response.getWriter().print(obj);
-    }
+//    @RequestMapping(value="/do/{flag}", method = RequestMethod.POST)
+//    public void addUpdateArticle(@RequestParam String articleNum,
+//                              @RequestParam String title,
+//                              @RequestParam String content,
+//                              @RequestParam String category,
+//                              @PathVariable String flag,
+//                              HttpServletResponse response) throws IOException {
+//
+//        int id = Integer.parseInt(articleNum);
+//        int res = 0;
+//        switch (flag) {
+//            case "update":
+//                switch (category) {
+//                    case "notice":
+//                        res = csService.updateNotice(id, title, content);
+//                        break;
+//                    case "faq":
+//                        res = csService.updateFaq(id, title, content);
+//                        break;
+//                }
+//                break;
+//            case "add":
+//                switch (category) {
+//                    case "notice":
+//                        res = csService.addNotice(title, content);
+//                        break;
+//                    case "faq":
+//                        res = csService.addFaq(title, content);
+//                        break;
+//                }
+//                break;
+//        }
+//        JSONObject obj = new JSONObject();
+//        if (res > 0) {
+//            obj.put("result", "SUCCESS");
+//        } else {
+//            obj.put("result", "FAIL");
+//        }
+//        response.setContentType("application/json; charset=utf-8");
+//        response.getWriter().print(obj);
+//    }
 
     @RequestMapping("/reviews")
     public ModelAndView showReviewList(){
