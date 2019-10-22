@@ -40,9 +40,5 @@
         </g><!-- /#milk-face -->
     </svg>
 </div>
-<script type="text/javascript" src="http://empireeightcreative.com/svg2gif/SVG2GIF.min.js">
-</script>
-<script type="text/javascript" src="http://empireeightcreative.com/svg2gif/SVG2GIF.min.js"></script>
-<%--<script src="/resources/js/error.js"></script>--%>
 </body>
 </html>
