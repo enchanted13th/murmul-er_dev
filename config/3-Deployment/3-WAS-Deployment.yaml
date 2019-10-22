@@ -15,7 +15,31 @@ spec:
   spec:
    containers:
    - name: was-cs
-     image: enchanted13th/was-cs:8.5
+     image: enchanted13th/was-cs:0.1
      ports:
      - name: was-cs
+       containerPort: 8080
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: was-main
+ labels:
+  app: was-main
+spec:
+ selector:
+  matchLabels:
+   app: was-main
+ template:
+  metadata:
+   labels:
+    app: was-main
+  spec:
+   containers:
+   - name: was-main
+     image: enchanted13th/was-main:0.1
+     ports:
+     - name: was-main
        containerPort: 8080
