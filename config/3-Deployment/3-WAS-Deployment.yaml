@@ -15,7 +15,7 @@ spec:
   spec:
    containers:
    - name: was-cs
-     image: enchanted13th/was-cs:0.1
+     image: enchanted13th/was-cs:0.2
      ports:
      - name: was-cs
        containerPort: 8080
@@ -39,7 +39,7 @@ spec:
   spec:
    containers:
    - name: was-main
-     image: enchanted13th/was-main:0.1
+     image: enchanted13th/was-main:0.3
      ports:
      - name: was-main
        containerPort: 8080
