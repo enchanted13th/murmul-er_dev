@@ -6,7 +6,7 @@
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://20.111.156.79:3306/murmuler_cs?serverTimezone=UTC&amp;useSSL=false" />
+        <property name="url" value="jdbc:mysql://192.168.122.79:32001/murmuler_cs?serverTimezone=UTC&amp;useSSL=false" />
         <property name="username" value="root" />
         <property name="password" value="password" />
     </bean>
