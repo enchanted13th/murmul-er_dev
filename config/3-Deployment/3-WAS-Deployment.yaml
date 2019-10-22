@@ -15,10 +15,7 @@ spec:
   spec:
    containers:
    - name: was-cs
-     image: enchanted13th/tomcat-cs:8.5
+     image: enchanted13th/was-cs:8.5
      ports:
-       name: was-cs
+     - name: was-cs
        containerPort: 8080
-
----
-
