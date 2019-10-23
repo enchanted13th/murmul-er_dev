@@ -91,8 +91,8 @@ $.showTalk = function() {
         Swal.fire('', '회원님이 등록하신 방입니다,', 'warning')
     }
 	else {
-        window.open("http://www.murmul-er.com:8080/talk/"+sellerMemberId, "", "status=no, width="+width+"px, height="+height+"px, left="+popupX+"px, top="+popupY+"px");
-        // window.open("/talk/"+sellerMemberId, "", "status=no, width="+width+"px, height="+height+"px, left="+popupX+"px, top="+popupY+"px");
+        // window.open("http://www.murmul-er.com:8080/talk/"+sellerMemberId, "", "status=no, width="+width+"px, height="+height+"px, left="+popupX+"px, top="+popupY+"px");
+        window.open("/talk/"+sellerMemberId, "", "status=no, width="+width+"px, height="+height+"px, left="+popupX+"px, top="+popupY+"px");
     }
 }
 

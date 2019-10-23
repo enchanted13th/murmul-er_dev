@@ -75,8 +75,8 @@ $.showTalkList = function() {
     let height = 830;
     let popupX = (window.screen.width / 2) - (width / 2);
     let popupY = (window.screen.height / 2) - (height / 2);
-    window.open("http://www.murmul-er.com:8080/talk", "", "status=no, width="+width+"px, height="+height+"px, left="+popupX+"px, top="+popupY+"px");
-    // window.open("/talk", "", "status=no, width="+width+"px, height="+height+"px, left="+popupX+"px, top="+popupY+"px");
+    // window.open("http://www.murmul-er.com:8080/talk", "", "status=no, width="+width+"px, height="+height+"px, left="+popupX+"px, top="+popupY+"px");
+    window.open("/talk", "", "status=no, width="+width+"px, height="+height+"px, left="+popupX+"px, top="+popupY+"px");
 }
 
 var pleaseReenter = function (title, content, selector) {
