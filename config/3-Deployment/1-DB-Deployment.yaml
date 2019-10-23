@@ -14,7 +14,7 @@ spec:
     app: mysql-main
   spec:
    containers:
-   - image: mysql:5.7
+   - image: enchanted13th/mysql:5.7
      name: container
      env:
      - name: MYSQL_ROOT_PASSWORD
@@ -51,7 +51,7 @@ spec:
     app: mysql-cs
   spec:
    containers:
-   - image: mysql:5.7
+   - image: enchanted13th/mysql:5.7
      name: container
      env:
      - name: MYSQL_ROOT_PASSWORD
