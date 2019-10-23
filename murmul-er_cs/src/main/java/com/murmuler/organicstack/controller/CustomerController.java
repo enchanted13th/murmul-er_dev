@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/service")
 public class CustomerController {
     private Log logger = LogFactory.getLog(CustomerController.class);
 
