@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 
 
 @Controller
-@RequestMapping("/service")
+@RequestMapping("/")
 public class CustomerController {
     private Log logger = LogFactory.getLog(CustomerController.class);
 
@@ -30,6 +30,7 @@ public class CustomerController {
 
     @RequestMapping(value="/notice", method= RequestMethod.GET)
     public ModelAndView noticeList(@RequestParam int page){
+        logger.info("/service/notice");
         ModelAndView mav = new ModelAndView();
         int total = customerService.getNoticeButtonCnt();
         List<NoticeVO> noticeList = customerService.getNoticeList(page);
