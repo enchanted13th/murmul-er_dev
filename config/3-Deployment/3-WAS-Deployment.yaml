@@ -39,7 +39,14 @@ spec:
   spec:
    containers:
    - name: was-main
-     image: enchanted13th/was-main:0.3
+     image: enchanted13th/was-main:0.5
      ports:
      - name: was-main
        containerPort: 8080
+     volumeMounts:
+     - name: murmuler-main-file-volume
+       mountPath: /root/murmuler
+   volumes:
+   - name: murmuler-main-file-volume
+     persistentVolumeClaim:
+      claimName: murmuler-main-file-pvc

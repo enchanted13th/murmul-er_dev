@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+ name: murmuler-main-file-pvc
+spec:
+ accessModes:
+ - ReadWriteMany
+ resources:
+  requests:
+   storage: 3G
+ storageClassName: ""
