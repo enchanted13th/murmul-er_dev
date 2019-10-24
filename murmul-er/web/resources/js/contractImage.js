@@ -107,9 +107,9 @@ $.setNumberUnit = function() {
     $(".imdae-monthly-num").addComma();
 }
 $.setSpecialProvision = function () {
-    let manageCost = defend($('.manage-cost').text());
-    let manages = defend($('.manage-cost-item').text());
-    let options = defend($('.option-item').text());
+    let manageCost = $('.manage-cost').text();
+    let manages = $('.manage-cost-item').text();
+    let options = $('.option-item').text();
 
     if(manageCost === '0') {
         $('.manage-cost').text('');

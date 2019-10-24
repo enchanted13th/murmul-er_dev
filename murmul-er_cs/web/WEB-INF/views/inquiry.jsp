@@ -38,6 +38,6 @@
         </form>
     </div>
 </div>
-<script src="/resources/js/inquiry.js"></script>
+<script src="/service/resources/js/inquiry.js"></script>
 </body>
 </html>
