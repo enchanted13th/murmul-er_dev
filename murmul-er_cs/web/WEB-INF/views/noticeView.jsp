@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>공지사항 | ${noticeVO.title}</title>
-    <link rel="stylesheet" href="/resources/css/noticeView.css"/>
+    <link rel="stylesheet" href="/service/resources/css/noticeView.css"/>
     <script>
         let content = "${noticeVO.content}";
     </script>
@@ -32,6 +32,6 @@
         </div>
     </div>
 </div>
-<script src="/resources/js/noticeView.js"></script>
+<script src="/service/resources/js/noticeView.js"></script>
 </body>
 </html>

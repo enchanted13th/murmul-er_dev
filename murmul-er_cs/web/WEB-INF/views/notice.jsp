@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>공지사항</title>
-	<link rel="stylesheet" href="/resources/css/notice.css" />
+	<link rel="stylesheet" href="/service/resources/css/notice.css" />
 	<script>
 		var curpage = ${curpage};
 		var flag = "cur";
@@ -46,6 +46,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="/resources/js/notice.js"></script>
+	<script src="/service/resources/js/notice.js"></script>
 </body>
 </html>

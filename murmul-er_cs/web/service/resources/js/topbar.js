@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('#btnLogo').click(function () {
-        location.href = '/';
+        location.href = '../../..';
     });
     $('#btnSearch').click(function () {
         location.href = '/searchRoom';
@@ -31,11 +31,11 @@ $.showPopup = function () {
             + '	<div id="menuPopup" class="menuPopup" onclick="$.showPopup()">'
             + '		<div class="menus">'
             + '			<ul>'
-            + '				<li><button id="btnMenuSearch"><img src="/resources/img/topbar/searchM.png"/></button></li>'
-            + '				<li><button id="btnMenuAddRoom"><img src="/resources/img/topbar/addRoomM.png"/></button></li>'
-            + '				<li><button id="btnMenuReview" ><img src="/resources/img/topbar/reviewM.png"/></button></li>'
-            + '				<li><button id="btnMenuAccount"><img src="/resources/img/topbar/accountM.png"/></button></li>'
-            + '				<li><button id="btnMenuService"><img src="/resources/img/topbar/serviceM.png"/></button></li>'
+            + '				<li><button id="btnMenuSearch"><img src="/service/resources/img/topbar/searchM.png"/></button></li>'
+            + '				<li><button id="btnMenuAddRoom"><img src="/service/resources/img/topbar/addRoomM.png"/></button></li>'
+            + '				<li><button id="btnMenuReview" ><img src="/service/resources/img/topbar/reviewM.png"/></button></li>'
+            + '				<li><button id="btnMenuAccount"><img src="/service/resources/img/topbar/accountM.png"/></button></li>'
+            + '				<li><button id="btnMenuService"><img src="/service/resources/img/topbar/serviceM.png"/></button></li>'
             + '			</ul>'
             + '		</div>'
             + '	</div>').appendTo($('body'));

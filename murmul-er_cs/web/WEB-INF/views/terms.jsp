@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>이용약관</title>
-    <link rel="stylesheet" href="/resources/css/terms.css"/>
+    <link rel="stylesheet" href="/service/resources/css/terms.css"/>
 </head>
 <body>
 <jsp:include page="topbar.jsp"/>
@@ -221,6 +221,6 @@
         </div>
     </div>
 </div>
-<script src="/resources/js/terms.js"></script>
+<script src="/service/resources/js/terms.js"></script>
 </body>
 </html>

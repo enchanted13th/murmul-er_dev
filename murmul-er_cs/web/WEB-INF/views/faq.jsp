@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>FAQ</title>
-    <link rel="stylesheet" href="/resources/css/faq.css"/>
+    <link rel="stylesheet" href="/service/resources/css/faq.css"/>
     <script>
         var curpage = ${curpage};
         var flag = "cur";
@@ -44,6 +44,6 @@
         </div>
     </div>
 </div>
-<script src="/resources/js/faq.js"></script>
+<script src="/service/resources/js/faq.js"></script>
 </body>
 </html>

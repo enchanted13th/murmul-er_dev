@@ -7,6 +7,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,22 +20,18 @@ import java.io.IOException;
 import java.util.List;
 import java.util.regex.Pattern;
 
+
 @Controller
-public class MainController {
-    private Log logger = LogFactory.getLog(MainController.class);
+@RequestMapping("/service")
+public class CustomerController {
+    private Log logger = LogFactory.getLog(CustomerController.class);
 
     @Autowired
     private CustomerService customerService;
 
-    @RequestMapping("/")
-    public void home() {
-        logger.info("MainController: /");
-//        return "redirect:/service/notice?page=1";
-    }
-
-    @RequestMapping(value="/service/notice", method= RequestMethod.GET)
+    @RequestMapping(value="/notice", method= RequestMethod.GET)
     public ModelAndView noticeList(@RequestParam int page){
-        logger.info("MainController: /notice");
+        logger.info("CustomerController: /service/notice");
         ModelAndView mav = new ModelAndView();
         int total = customerService.getNoticeButtonCnt();
         List<NoticeVO> noticeList = customerService.getNoticeList(page);
@@ -54,7 +51,7 @@ public class MainController {
         return mav;
     }
 
-    @RequestMapping(value="/service/notice/{notice_id}", method= RequestMethod.GET)
+    @RequestMapping(value="/notice/{notice_id}", method= RequestMethod.GET)
     public ModelAndView noticeView(@PathVariable("notice_id") String id){
         ModelAndView mav = new ModelAndView();
         NoticeVO noticeVO = customerService.getNoticeDetail(Integer.parseInt(id));
@@ -64,7 +61,7 @@ public class MainController {
         return mav;
     }
 
-    @RequestMapping(value="/service/faq", method= RequestMethod.GET)
+    @RequestMapping(value="/faq", method= RequestMethod.GET)
     public ModelAndView faqList(@RequestParam int page){
         ModelAndView mav = new ModelAndView();
         int total = customerService.getFaqButtonCnt();
@@ -83,7 +80,7 @@ public class MainController {
         return mav;
     }
 
-    @RequestMapping(value="/service/faq/{faq_id}", method= RequestMethod.GET)
+    @RequestMapping(value="/faq/{faq_id}", method= RequestMethod.GET)
     public ModelAndView faqList(@PathVariable("faq_id") String id){
         ModelAndView mav = new ModelAndView();
         if(id == null){
@@ -98,17 +95,17 @@ public class MainController {
         return mav;
     }
 
-    @RequestMapping(value = "/service/support", method = RequestMethod.GET)
+    @RequestMapping(value = "/support", method = RequestMethod.GET)
     public String inquiry(){
         return "inquiry";
     }
 
-    @RequestMapping("/service/terms")
+    @RequestMapping("/terms")
     public String terms(){
         return "terms";
     }
 
-    @RequestMapping(value = "/service/support", method = RequestMethod.POST)
+    @RequestMapping(value = "/support", method = RequestMethod.POST)
     public void inquiry(@RequestParam("emailId") String emailId,
                         @RequestParam("emailDomain") String emailDomain,
                         @RequestParam("content") String content,
@@ -138,22 +135,22 @@ public class MainController {
         response.getWriter().print(jobj);
     }
 
-//    @RequestMapping(value = "change-process-status", method = RequestMethod.POST)
-//    public void changeProcessStatus(@RequestParam int id,
-//                                    @RequestParam String processStatus,
-//                                    HttpServletResponse response) throws IOException {
-//        logger.info("change process status method entered...");
-//        JSONObject res = new JSONObject();
-//
-//        if(customerService.changeProcessStatus(id, processStatus) > 0){
-//            res.put("result", "SUCCESS");
-//        } else {
-//            res.put("result", "FAIL");
-//        }
-//
-//        response.setContentType("application/json; charset=utf-8;");
-//        response.getWriter().print(res);
-//    }
+    @RequestMapping(value = "change-process-status", method = RequestMethod.POST)
+    public void changeProcessStatus(@RequestParam int id,
+                                    @RequestParam String processStatus,
+                                    HttpServletResponse response) throws IOException {
+        logger.info("change process status method entered...");
+        JSONObject res = new JSONObject();
+
+        if(customerService.changeProcessStatus(id, processStatus) > 0){
+            res.put("result", "SUCCESS");
+        } else {
+            res.put("result", "FAIL");
+        }
+
+        response.setContentType("application/json; charset=utf-8;");
+        response.getWriter().print(res);
+    }
 
 }
 

@@ -18,7 +18,7 @@ $.showJoinPopup = function () {
             + '			<button onclick="$.showJoinPopup()">X</button>'
             + '		</div>'
             + '		<div class="logo">'
-            + '			<img src="/resources/img/topbar/logo.png"></img>'
+            + '			<img src="/service/resources/img/topbar/logo.png"></img>'
             + '		</div>'
             + '		<h1 align="center">회 원 가 입</h1>'
             + '		<form name="joinForm" method="post" onsubmit="return false;">'

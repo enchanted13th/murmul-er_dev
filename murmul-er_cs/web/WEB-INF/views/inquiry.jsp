@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>1:1 문의</title>
-    <link rel="stylesheet" href="/resources/css/inquiry.css"/>
+    <link rel="stylesheet" href="/service/resources/css/inquiry.css"/>
 </head>
 <body>
 <jsp:include page="topbar.jsp"/>

@@ -6,10 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<link rel="stylesheet" href="/resources/css/subtitle_cs.css"/>
-<script src="/resources/js/csSubtitle.js"></script>
+<link rel="stylesheet" href="/service/resources/css/subtitle_cs.css"/>
+<script src="/service/resources/js/csSubtitle.js"></script>
 <div class="csgirl">
-    <img src="/resources/img/etc/csgirl.png"/>
+    <img src="/service/resources/img/etc/csgirl.png"/>
 </div>
 <div class="csTitle">
     <div>고객센터</div>

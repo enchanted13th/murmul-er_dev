@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>FAQ | ${faqVO.title}</title>
-    <link rel="stylesheet" href="/resources/css/faqView.css"/>
+    <link rel="stylesheet" href="/service/resources/css/faqView.css"/>
 </head>
 <body>
 <jsp:include page="topbar.jsp"/>
@@ -32,6 +32,6 @@
         </div>
     </div>
 </div>
-<script src="/resources/js/faqView.js"></script>
+<script src="/service/resources/js/faqView.js"></script>
 </body>
 </html>

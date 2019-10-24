@@ -12,7 +12,7 @@ $.showLoginPopup = function (flag, url) {
             + '			<button onclick="$.showLoginPopup()">X</button>'
             + '		</div>'
             + '		<div class="logo">'
-            + '			<img src="/resources/img/topbar/logo.png"/>'
+            + '			<img src="/service/resources/img/topbar/logo.png"/>'
             + '		</div>'
             + '		<form method="post" name="loginForm" onsubmit="return false;">'
             + '			<div class="divInput">'
