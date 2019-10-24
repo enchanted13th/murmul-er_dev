@@ -9,12 +9,12 @@ spec:
  rules:
  - http:
     paths:
-    - path: /service
-      backend:
-       serviceName: was-cs
-       servicePort: 8080
     - path: /
       backend:
        serviceName: was-main
+       servicePort: 8080
+    - path: /service
+      backend:
+       serviceName: was-cs
        servicePort: 8080
 
