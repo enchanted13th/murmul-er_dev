@@ -27,9 +27,9 @@ public class MainController {
     private CustomerService customerService;
 
     @RequestMapping("/")
-    public String home() {
+    public void home() {
         logger.info("MainController: /");
-        return "redirect:/service/notice?page=1";
+//        return "redirect:/service/notice?page=1";
     }
 
     @RequestMapping(value="/service/notice", method= RequestMethod.GET)
