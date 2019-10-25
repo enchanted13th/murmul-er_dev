@@ -1,0 +1,73 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+ name: murmuler-main-db-pv
+ labels:
+  volume: murmuler-main-db-pv
+spec:
+ capacity:
+  storage: 3G
+ accessModes:
+ - ReadWriteMany
+ volumeMode: Filesystem
+ mountOptions:
+  - hard
+  - nfsvers=4.1
+ nfs:
+  path: /root/murmuler_main
+  server: 192.168.122.1
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+ name: murmuler-cs-db-pv
+ labels:
+  volume: murmuler-cs-db-pv
+spec:
+ capacity:
+  storage: 3G
+ accessModes:
+ - ReadWriteMany
+ volumeMode: Filesystem
+ mountOptions:
+  - hard
+  - nfsvers=4.1
+ nfs:
+  path: /root/murmuler_cs
+  server: 192.168.122.1
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+ name: murmuler-main-db-pvc
+spec:
+ accessModes:
+ - ReadWriteMany
+ resources:
+  requests:
+   storage: 3G
+ storageClassName: ""
+ selector:
+  matchLabels:
+   volume: murmuler-main-db-pv
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+ name: murmuler-cs-db-pvc
+spec:
+ accessModes:
+ - ReadWriteMany
+ resources:
+  requests:
+   storage: 3G
+ storageClassName: ""
+ selector:
+  matchLabels:
+   volume: murmuler-cs-db-pv
