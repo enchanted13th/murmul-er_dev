@@ -1,5 +1,4 @@
 const ADD = 0;
-var checkList = [];
 
 $(document).ready(function(){
     $('#addbtn').click(function(){
@@ -8,10 +7,6 @@ $(document).ready(function(){
 })
 
 $.fn.edit = function(){
-    //     // if (text) {
-    //     //     Swal.fire(text)
-    //     // }
-    // })
     let id = $(this).attr('id').split('img')[1];
     let num = $(this).attr('id').split('img')[2];
     $.allPopup(id, num);
