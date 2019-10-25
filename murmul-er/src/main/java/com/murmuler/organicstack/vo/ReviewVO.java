@@ -2,12 +2,15 @@ package com.murmuler.organicstack.vo;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.ArrayList;
 
 @Data
 @NoArgsConstructor
-public class ReviewVO {
+public class ReviewVO implements Serializable {
+    private static final long serialVersionUID = 1L;
     public final String TYPE_PERIOD_YEAR = "Y";
     public final String TYPE_PERIOD_MONTH = "M";
     public final String TYPE_PERIOD_WEEK = "W";
