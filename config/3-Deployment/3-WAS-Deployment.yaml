@@ -5,6 +5,7 @@ metadata:
  labels:
   app: was-cs
 spec:
+ replicas: 2
  selector:
   matchLabels:
    app: was-cs
@@ -15,7 +16,7 @@ spec:
   spec:
    containers:
    - name: was-cs
-     image: enchanted13th/cs-was:1.0
+     image: enchanted13th/was-cs:1.0
      ports:
      - name: was-cs
        containerPort: 8080
@@ -29,6 +30,7 @@ metadata:
  labels:
   app: was-main
 spec:
+ replicas: 2
  selector:
   matchLabels:
    app: was-main
@@ -39,7 +41,7 @@ spec:
   spec:
    containers:
    - name: was-main
-     image: enchanted13th/main-was:1.0
+     image: enchanted13th/was-main:1.0
      ports:
      - name: was-main
        containerPort: 8080

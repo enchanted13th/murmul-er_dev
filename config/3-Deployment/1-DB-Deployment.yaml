@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
  name: mysql-main
 spec:
+ replicas: 1
  selector:
   matchLabels:
    app: mysql-main
@@ -40,6 +41,7 @@ kind: Deployment
 metadata:
  name: mysql-cs
 spec:
+ replicas: 1
  selector:
   matchLabels:
    app: mysql-cs
